@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+header a:hover {
+    font-size: 19px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    transition: 0.5s ease;
+}
+
+.caixa-botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.botoes {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    text-align: left;
+    border: 1px solid #ffffff;
+}
+
+.botoes:hover {
+    opacity: 0.8;
+}
+
+.botoes:active {
+    opacity: 0.6;
+}
+
+.preto {
+    background: #000000;
+}
+
+.branco {
+    background: #ffffff;
+}
+
+.laranja {
+    background: orange;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    padding: 50px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.price h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.hero ul {
+    list-style-type: none;
+    ;
+    margin-bottom: 30px;
+}
+
+.botoes-hero button {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: none;
+    width: 150px;
+    height: 45px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+.botoes-gb button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 0 30px 0;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+body,
+.texto-hero *,
+header a,
+button {
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+}
+
+footer {
+  background-color: #000; 
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Noto Sans", sans-serif;
+  border-top: 2px solid #fff; 
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.email {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+footer h5 {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+@media (max-width: 1011px) {
+    header {
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    header a {
+        font-size: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .texto-hero {
+        order: 1;
+        align-items: center;
+    }
+
+    .imagemtenis {
+        order: 2;
+        width: 100%;
+        max-width: 500px;
+        margin: 0;
+        transition: 0.4s ease;
+    }
+
+    .caixa-botoes {
+        order: 3;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: -30%;
+    }
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        transition: 0.5s ease;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 50px;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .botoes {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10%;
+    }
+
+    .texto-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+    }
+
+    .caixa-botoes {
+        display: flex;
+        gap: 10px;
+        margin-top: 5%;
+    }
+
+
+    .imagemtenis {
+        order: 2;
+        width: 95%;
+        max-width: 600px;
+        margin: 0;
+        transition: 0.4s ease;
+    }
+}
+
+@media (max-width: 430px) {
+    header {
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    header a {
+        font-size: 17px;
+    }
+
+    .imagemtenis {
+        order: 2;
+        width: 350px;
+        margin: 0;
+        transition: 0.4s ease;
+    }
+
+    .botoes-hero button {
+        width: 110px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+
+    .botoes-gb button {
+        width: 90px;
+        height: 30px;
+        font-size: 0.8em;
+    }
+}

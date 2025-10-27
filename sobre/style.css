@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 0 20px 0 20px;
+}
+
+.container h1 {
+    font-size: 6.5em;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+
+.container h2 {
+    font-size: 1.8em;
+    max-width: 800px;
+    margin-bottom: 5%;
+}
+
+.container p {
+    font-size: 1.2em;
+    max-width: 1000px;
+    margin-bottom: 8%;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    transition: 0.5s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+header a:hover {
+    font-size: 19px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+}
+
+footer {
+  background-color: #000; 
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Noto Sans", sans-serif;
+  border-top: 2px solid #fff; 
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.email {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+footer h5 {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 1011px) {
+    header {
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    header a {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 520px) {
+    header {
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    header a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 390px) {
+    header {
+        flex-direction: row;
+        flex-flow: wrap;
+        gap: 20px;
+        padding: 0 10px 0 10px;
+        margin-top: 30px;
+    }
+
+    header a {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One+SC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Landing Page iOne X</title>
+</head>
+
+<body>
+    <header>
+        <a onclick="irParaSobre()">Sobre</a>
+        <a onclick="irParaSaibaMais()">Saiba Mais</a>
+        <a href="#contato" onclick="rolarParaContato(event)">Contato</a>
+    </header>
+    <section class="hero">
+        <div class="texto-hero">
+            <h1>iOne X</h1>
+            <h3>O Futuro no Seu Bolso.</h3>
+            <h2>Destaques</h2>
+            <ul>
+                <li>Tela Infinita de 6.7 polegadas</li>
+                <li>Câmera Tripla de 108MP Ultra HD</li>
+                <li>Bateria Inteligente de Longa Duração de 5000mAh</li>
+                <li>Processador Ultra Rápido X-Gen 5G</li>
+            </ul>
+            <div class="botoes-hero">
+                <button class="saibamais" onclick="irParaSobre()">Sobre a iOne</button>
+                <button class="saibamais" onclick="irParaSaibaMais()">Saiba Mais</button>
+            </div>
+            <div class="botoes-gb">
+                <button class="buttongb" onclick="cliqueino128()">128GB</button>
+                <button class="buttongb" onclick="cliqueino256()">256GB</button>
+            </div>
+            <div class="price">
+                <h1>R$9.750,00</h1>
+            </div>
+            <div class="caixa-botoes">
+                <div onclick="mudarVisual('#000000', '../assets/iPhonePreto.png')" class="botoes preto"></div>
+                <div onclick="mudarVisual('#ffa600', '../assets/iPhoneLaranja.png')" class="botoes laranja"></div>
+                <div onclick="mudarVisual('#ffffff', '../assets/iPhoneBranco.png')" class="botoes branco"></div>
+            </div>
+        </div>
+
+        <img src="./assets/iPhonePreto.png" alt="iPhone Preto" class="imagemtenis">
+    </section>
+    <footer id="contato">
+        <div class="footer-container">
+            <h2>Contato</h2>
+
+            <div class="footer-icons">
+                <a href="https://instagram.com/seu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="./assets/Instagram.svg" alt="Instagram iOne" class="social-icon">
+                </a>
+                <a href="https://wa.me/5511999999999?text=Olá" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <img src="./assets/whatsapp.png" alt="WhatsApp iOne" class="social-icon">
+                </a>
+            </div>
+
+            <p class="email">ContatoiOne@gmail.com</p>
+            <h5>© 2025 iOne. Todos os direitos reservados.</h5>
+        </div>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>

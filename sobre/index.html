@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One+SC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Sobre a iOne</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">Início</a>
+        <a onclick="irParaSaibaMais()">Saiba Mais</a>
+        <a href="#contato" onclick="rolarParaContato(event)">Contato</a>
+    </header>
+    <div class="container">
+        <h1>iONE</h1>
+        <h2>A iOne nasceu para desafiar o padrão e criar produtos que unem estilo e desempenho.</h2>
+        <p>
+            Sobre a iOne
+            A iOne nasceu para desafiar padrões e criar produtos que unem estilo, tecnologia e desempenho. Nossa missão
+            é transformar a experiência móvel, combinando inovação e design sofisticado em cada detalhe.
+
+            Com anos de pesquisa e dedicação, desenvolvemos produtos que não apenas acompanham o futuro, mas o
+            antecipam. Cada aparelho iOne é projetado para oferecer potência, praticidade e elegância para todos os
+            dias.
+        </p>
+    </div>
+    <footer id="contato">
+        <div class="footer-container">
+            <h2>Contato</h2>
+
+            <div class="footer-icons">
+                <a href="https://instagram.com/seu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="../assets/Instagram.svg" alt="Instagram iOne" class="social-icon">
+                </a>
+                <a href="https://wa.me/5511999999999?text=Olá" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <img src="../assets/whatsapp.png" alt="WhatsApp iOne" class="social-icon">
+                </a>
+            </div>
+
+            <p class="email">ContatoiOne@gmail.com</p>
+            <h5>© 2025 iOne. Todos os direitos reservados.</h5>
+        </div>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const cor = localStorage.getItem("corSelecionada");
+        const imagem = localStorage.getItem("imagemSelecionada");
+
+        if (cor) document.body.style.backgroundColor = cor;
+
+        const img = document.querySelector(".imagemtenis");
+        if (img && imagem) {
+            console.log("Imagem carregada do localStorage:", imagem); // para debug
+            img.src = imagem;
+        }
+
+
+        const textos = document.querySelectorAll(".container h1, .container h2, .container p, header a")
+        if (cor === "#ffffff")
+            textos.forEach(texto => {
+                texto.style.color = cor === "#000000" ? "#ffffff" : "#000000";
+            });
+    });
+
+    function irParaSaibaMais() {
+        window.location.href = "../saibamais";
+    }
+
+    function rolarParaContato(event) {
+        event.preventDefault();
+        const footer = document.getElementById("contato");
+        if (footer) {
+            footer.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+</script>
+
+</html>

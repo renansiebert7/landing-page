@@ -67,20 +67,15 @@
       img.src = caminhoCorrigido;
     }
 
-    // 🔹 Aqui movemos o código de troca de cor de texto para dentro
     const textos = document.querySelectorAll(
       ".container h1, .container h2, p, header a"
     );
 
     textos.forEach((texto) => {
-      // Se o fundo for branco, texto fica preto
-      // Se o fundo for preto, texto fica branco
       if (cor === "#ffffff") {
         texto.style.color = "#000000";
-      } else if (cor === "#000000") {
-        texto.style.color = "#ffffff";
       } else {
-        texto.style.color = "#000000"; // cor padrão
+        texto.style.color = "#ffffff"; 
       }
     });
   });

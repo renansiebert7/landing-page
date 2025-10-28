@@ -61,21 +61,23 @@
 
     const img = document.querySelector(".imagemtenis");
     if (img && imagem) {
-      console.log("Imagem carregada do localStorage:", imagem);
-      img.src = imagem;
-    }
-
-
-    const textos = document.querySelectorAll(".container h1, .container h2, p, header a")
-    if (cor === "#ffffff")
-      textos.forEach(texto => {
-        texto.style.color = cor === "#000000" ? "#ffffff" : "#000000";
-      });
-
-    function irParaSobre() {
-      window.location.href = "./sobre";
+      // Corrige o caminho se estiver vindo da raiz
+      const caminhoCorrigido = imagem.startsWith("./")
+        ? imagem.replace("./", "../")
+        : imagem;
+      img.src = caminhoCorrigido;
     }
   });
+
+  const textos = document.querySelectorAll(".container h1, .container h2, p, header a")
+  if (cor === "#ffffff")
+    textos.forEach(texto => {
+      texto.style.color = cor === "#000000" ? "#ffffff" : "#000000";
+    });
+
+  function irParaSobre() {
+    window.location.href = "./sobre";
+  }
 </script>
 
 </html>
